@@ -4,10 +4,41 @@
   font-family: 'Roboto', sans-serif;
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
 }
 
+/* Remove hardcoded black background */
 .App {
   height: 100%;
   width: 100%;
-  background-color: black;
+}
+
+/* 🌗 Theme Styles */
+.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+.light-mode {
+  background-color: #f4f4f4;
+  color: #121212;
+}
+
+/* 🌞 Theme Toggle Button */
+.theme-toggle {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border-radius: 20px;
+  border: 2px solid currentColor;
+  background-color: transparent;
+  cursor: pointer;
+  z-index: 999;
+  transition: all 0.3s ease;
+}
+
+.theme-toggle:hover {
+  background-color: rgba(0, 0, 0, 0.1);
 }

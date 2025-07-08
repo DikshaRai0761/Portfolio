@@ -10,34 +10,30 @@ const projects = [
     github: "",
     demo: "",
   },
-
   {
     name: "AirWin",
     image: "https://i.postimg.cc/qMhLWpt7/AirWin.jpg",
     description:
-      "A full-stack Hotel's Boking application with user authentication.",
+      "A full-stack Hotel's Booking application with user authentication.",
     techStack: "JS, Node.js, MongoDB, Express",
     github: "https://github.com/DikshaRai0761/AirWin",
     demo: "",
   },
-
   {
     name: "Weather App",
     image: "https://i.postimg.cc/DfdYH0Gc/Weather-App.png",
     description:
-      "A Weather application using of React.js and React MUI Library, and Open Weather Map API for current Weather Data.",
+      "A Weather application using React.js and React MUI Library, and Open Weather Map API for current Weather Data.",
     techStack: "React.js, MUI React Library, OpenWeatherMap API",
     github: "",
     demo: "",
   },
-
   {
     name: "Spotify Clone",
     image: "https://i.postimg.cc/7LGtswy3/Spotify.png",
     description:
       "Spotify desktop app clone built with Tauri and Tailwind, with basic functionality.",
-    techStack:
-      "HTML, CSS, and JavaScript.",
+    techStack: "HTML, CSS, and JavaScript.",
     github: "https://github.com/DikshaRai0761/Clone-Spotify",
     demo: "https://diksharai0761.github.io/Clone-Spotify/"
   },
@@ -50,21 +46,21 @@ const projects = [
     demo: "",
   },
   {
-  name: "Zoom App",
-  image: "https://i.postimg.cc/9Qqfcwds/Zoom.png",
-  description: "Simple Web Application that offer you to create video meeting room using WebRTC and Socket. ",
-  techStack: "Next.js,TypeScript, Clerk, getstream, shadcn, Tailwind CSS",
-  github: "https://github.com/DikshaRai0761/ZOOM",
-  demo: "",
-},
-{
-  name: "Simon Says Game",
-  image: "https://i.postimg.cc/3x7KQfw0/Simon-Says-Game.png",
-  description: "A Simon Says Game using Java Script  ",
-  techStack: "Java Script, HTML 5, CSS",
-  github: "https://github.com/DikshaRai0761/Simon-Says-Game",
-  demo: "https://diksharai0761.github.io/Simon-Says-Game/",
-},
+    name: "Zoom App",
+    image: "https://i.postimg.cc/9Qqfcwds/Zoom.png",
+    description: "Simple Web Application that offers video meetings using WebRTC and Socket.io.",
+    techStack: "Next.js, TypeScript, Clerk, Getstream, shadcn, Tailwind CSS",
+    github: "https://github.com/DikshaRai0761/ZOOM",
+    demo: "",
+  },
+  {
+    name: "Simon Says Game",
+    image: "https://i.postimg.cc/3x7KQfw0/Simon-Says-Game.png",
+    description: "A Simon Says Game using JavaScript.",
+    techStack: "JavaScript, HTML5, CSS",
+    github: "https://github.com/DikshaRai0761/Simon-Says-Game",
+    demo: "https://diksharai0761.github.io/Simon-Says-Game/",
+  },
 ];
 
 const Projects = () => {
@@ -73,7 +69,6 @@ const Projects = () => {
       <div className="headings">
         <h2 className="heading">My Projects</h2>
         <p className="sub-heading">Here are some of my best works.</p>
-        <p>Please Scrool Up</p>
       </div>
 
       <div className="projects">
@@ -85,28 +80,24 @@ const Projects = () => {
               className="project-img"
             />
             <div className="details">
-              <div>
-                <h3 className="project-name">{project.name}</h3>
-              </div>
-
-              <div>
-                <p className="project-desc">{project.description}</p>
-                <p className="project-tech-stack">
-                  Tech Stack: {project.techStack}
-                </p>
-                <div className="project-links">
-                  <button className="project-link">
-                    <a href={project.github} target="_blank">
-                      GitHub
-                    </a>
-                  </button>
-
-                  <button className="project-link">
-                    <a href={project.demo || "#"} target="_blank">
-                      {project.demo ? "Live Demo" : "Not Deployed"}
-                    </a>
-                  </button>
-                </div>
+              <h3 className="project-name">{project.name}</h3>
+              <p className="project-desc">{project.description}</p>
+              <p className="project-tech-stack">
+                <strong>Tech Stack:</strong> {project.techStack}
+              </p>
+              <div className="project-links">
+                {project.github && (
+                  <a href={project.github} target="_blank" rel="noreferrer" className="project-link">
+                    GitHub
+                  </a>
+                )}
+                {project.demo ? (
+                  <a href={project.demo} target="_blank" rel="noreferrer" className="project-link">
+                    Live Demo
+                  </a>
+                ) : (
+                  <span className="project-link disabled">Not Deployed</span>
+                )}
               </div>
             </div>
           </div>
