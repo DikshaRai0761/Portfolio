@@ -8,7 +8,7 @@ A **clean, responsive, and blazing‑fast** developer portfolio built with **Rea
 Showcase your projects, tech stack, achievements, and contact information on a single, elegant page.
 
 <p align="center">
-  <img src="public/cover.png" alt="Portfolio banner" width="100%" />
+  <img src="public/port.jpg" alt="Portfolio banner" width="100%" />
 </p>
 
 ---
